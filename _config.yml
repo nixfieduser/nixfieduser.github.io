@@ -46,7 +46,7 @@ dash:
   avatar_path: /assets/profile.png
 
 # Build settings
-theme: jekyll-dash
+#theme: jekyll-dash
 
 plugins:
  - jekyll-feed
