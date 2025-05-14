@@ -1,6 +1,4 @@
----
-layout: default
----
+
 The following are a list of Linux commands, proprieties, and related programs that I am learning such as VIM and markdown editors. I intent to update it regularly.
 
 
@@ -201,22 +199,108 @@ echo -e "Hi! I am experimenting vertical tab space \vis it the same as a new lin
 The -e parameter is required to interpret the commands set by \
 
 ---
-## User management:
-
-
-
-
-
-
-
-
-
-
----
-
 ## VIM:
 
+Basic text navigation can be done by using the letters `H J K L`. 
+Other nice position related commands are:
+
+```
+0     #move cursor to the beginning of the line
+
+e     #move cursor to the end of each word
+```
+
+To switch into writing mode there are several options:
+
+- press i to start typing at the current line position and BEFORE the cursor.
+- press a to start typing at the current line position and AFTER the cursor.
+- press A to start typing at the END of current line.
+
+While in `normal`mode, the following operations are available:
+
+```
+dw        #delete word starting from the cursor position
+
+de        #similar to the previous command but e stands for the last element (keeping blank spaces)
+
+d[2...9]w #delete N amount of words starting from the cursor position
+
+x         #delete current character 
+
+d$        #delete the entire line starting from the cursor
+
+dd        #delete the entire line regardless of the cursor position (single d also works)
+
+[2...9]dd #delete N amount of lines
+
+u         #undo command
+U         #undo entire line
+
+p         #paste the last deleted line bellow the cursor
+
+ctril-r   #redo
+```
+
+To quickly edit without enter into `edit`mode one can can utilize the following commands:
+
+```
+r[a...z]  #r accompanied by any symbol will overwrite the current value under the cursor
+
+ce        #allows the overwriting of the current word until its last element
+
+cc        #overwrite the entire line extension (single c also works)
+
+c$        #similar to the d$ command, allows inserting over the current position until the end of the line
+```
+
+##### Copy/Paste:
+
+- press `yy` to copy the entire line and `p` to paste it.
+- press `y6y` or `6y`  to copy the current and 5 other lines.
+- press `yw`  copy the current word.
+- press `y6w` to copy the current word and the following 5.
+
+##### To switch between lines:
+
+- **Ctrl-g** to exhibit the filename/location and current line number.
+- to move forward type the specific line number and press enter.
+- to move backwards type the specific line number and press uppercase G.
+- to move to the previous location type Ctrl-o.
+
+##### Searching:
+
+- press `/` and type the desired word or phrase. Press n or N to move forward and backwards among the results.   
+- press `?`to search in the reverse order. Press n or N to move forward and backwards among the results.
+- press `%`  to search for corresponding symbols over current cursor position. Specially useful for programming blocks such as () {} {{}} "" '' 
+ 
+##### Substitution:
+
+To search and automatically overwrite words and phrases use the following commands:
+
+```
+:s:old_word/new_word/g  #change all ocurrances of old_word from current line into new_word
+
+:s:old_word/new_word   #change only the first ocurrence of old_word
+
+:283,576s/old_word/new_word/g  #change all ocurrances of old_word between the lines 283 and 576
+
+:%s/old_word/new_word/gc   #change ocurrances of old_word in the ENTIRE file. Adding % at the beginning is required and C is for confirmation only
+```
+
+##### External commands:
+
+While using VIM one can execute external commands such as `ls -al | less`without opening another terminal emulator window or switching away from the editor. Simply type `:! ls -al | less`.
+
+##### Buffers:
+
+To utilize multiple buffers within the same VIM session you may use the following commands:
+
+- press `Ctrl-w` and then **v** to split vertically or type `:vs`.
+- press `Ctrl-w` and then **s** to split horizontally or type `:sp`.
+- press `Ctrl-w` plus **-** or **+** to resize vertically and **=** to reset.
+- press `Ctrl-w` plus **<** or **>** to resize horizontally and **=** to reset.
 
 
 
-
+ps  (parameters) | grep (name)
+pgrep (ps + grep)
