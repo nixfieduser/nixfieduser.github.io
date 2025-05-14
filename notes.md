@@ -1,4 +1,6 @@
-
+---
+layout: default
+---
 The following are a list of Linux commands, proprieties, and related programs that I am learning such as VIM and markdown editors. I intent to update it regularly.
 
 
