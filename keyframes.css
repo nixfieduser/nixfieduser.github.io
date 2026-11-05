@@ -1,0 +1,6 @@
+@keyframes cursor_blink {
+    50% {
+        color: #5C5A94;
+        text-shadow: none;
+    }
+}
