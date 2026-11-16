@@ -290,7 +290,7 @@ footer {
 
 
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media  (max-width: 768px) {
 
 
     header {
@@ -326,7 +326,7 @@ footer {
         flex-direction: column;
         margin-bottom: 1000px;
         width: 100vw;
-        height: 1300px;
+        height: 1500px;
 
     }
 
