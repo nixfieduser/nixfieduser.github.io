@@ -21,6 +21,7 @@ header {
     background-color: #5C5A94;
     box-shadow: 5px 5px 15px 4px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
+    z-index: 1;
 
 }
 
@@ -31,7 +32,7 @@ header span {
 
 }
 
-#span_cursor {
+.span_cursor {
     animation-name: cursor_blink;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -73,15 +74,18 @@ li a {
  }
 
 
-
+ a {
+     color: lightgoldenrodyellow;
+ }
 
 
 
 #intro {
     display: flex;
-    width: 1200px;
+    width: 1400px;
     height: 1100px;
     margin: auto;
+
 
 
 }
@@ -97,30 +101,64 @@ li a {
         background-color: #36354A;
         border-radius: 10px;
         border: 2px solid #38374D;
-        padding: 20px;
+        padding: 40px;
     }
 }
 
 #intro-contact {
-    background-color: #5C5A94;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    width: 250px;
+
     padding: 20px;
     text-align: center;
     font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 10px;
+    text-shadow: 2px 2px black;
+    font-size: 1.6rem;
+
     a {
         text-decoration: none;
         color: white;
-        padding: 5px;
+        padding: 25px;
+
     }
 
+    a:hover {
+        font-size: 1.8rem;
+
+        .icon {
+            width: 55px;
+            height: 55px;
+        }
+    }
 }
 
-#intro-text,#intro-contact,#term,dt,dd,td, ul a {
+.icon {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    background-color: white;
+
+    /*masks has no effect when trying using local files only
+      python3 -m http.server 8000
+   */
+    -webkit-mask: var(--icon) no-repeat center / contain; /*Compatibility only*/
+    mask: var(--icon) no-repeat center / contain;
+}
+
+.github {
+    --icon: url("./src/github.svg");
+}
+
+.protonmail{
+    --icon: url("./src/protonmail.svg");
+}
+
+
+#intro-text,#term,dt,dd,td, ul a {
         /* h|v-offset; blur; spread  */
     box-shadow: 5px 5px 15px 4px rgba(0, 0, 0, 0.10);
 }
@@ -130,7 +168,7 @@ li a {
     padding: 10px;
     margin-left: 10px;
     dd {
-        padding: 10px;
+        padding: 15px;
         background-color: #36354A;
         color: lightyellow;
         margin: 8px;
@@ -158,16 +196,29 @@ li a {
 #recent_post {
     width: 1200px;
     margin: auto;
+    margin-bottom: 150px;
 }
 
-#ln {
-    border: 3px solid #39384D;
-    border-radius: 10px;
-    width: 900px;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 100px;
+#recent {
+    margin-top: 100px;
+    width: fit-content;
+    color: lightyellow;
+
+
 }
+
+#recent > a {
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+
+}
+
+#recent > a:hover {
+    font-size: 3.2rem;
+}
+
+
 
 #fastfetch{
 
@@ -273,8 +324,9 @@ footer {
 
     #intro {
         flex-direction: column;
-        margin-bottom: 800px;
+        margin-bottom: 1000px;
         width: 100vw;
+        height: 1300px;
 
     }
 
@@ -289,7 +341,7 @@ footer {
     }
 
     #recent_post {
-        width: 100vw;
+        width: 90vw;
     }
 
 
@@ -299,24 +351,33 @@ footer {
     }
 
     #fastfetch {
-        width: 100vw;
+        width: 95vw;
+
     }
 
     #term {
         flex-direction: column;
-        width: 100vw;
+        width: 95vw;
+        margin: auto;
+        padding: 0;
         #output1 {
-            width: 100vw;
+            width: 90vw;
             padding: 35px;
         }
         #output2 {
-            width: 100vw;
+            width: 90vw;
             padding: 35px;
         }
     }
 
+    td {
+        width: 350px;
+        
+    }
+
     footer {
-        width: 100vw;
+        width: 80vw;
     }
 
 }
+p
