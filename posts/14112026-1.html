@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nixfied User</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../post_style.css">
+  </head>
+  <body>
+
+    <header>
+      <h1><span class="span_cursor">|</span>Nixfied<span>_$</span>USER</h1>
+      <ul id="navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#fastfetch">Fastfetch</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </header>
+
+    <div id="spacer"></div>
+
+    <div id="post">
+
+      <h1 id="post_title"><span id="date">Nov 15, 26 <span id="span_sign">>></span></span> Hello World!</h1>
+
+      <article>
+        <p>I thought about doing a simple <span id="highlight">HELLO WORLD</span> to test a few things here, but better yet I will write something with a increased length and different text/block formating, so here I go.</p>
+
+
+      <p>And as a Linux user what better introduction is there rather than talking about my setup? Especially my OS?</p>
+
+      <p>It is obvious judging by the name of this blog which system I do use primarily. Can you recognize it?</p>
+
+        <p>Anyway, I won't go into many details about my Linux journey so far, but sufficient to say I have been a <span id="highligh">Linux/opensource enjoyer</span> for several years already, going as far back as my high school years.</p>
+
+      <p>Tested and used several distros, such as Ubuntu, Slackware, Arch, the former Antergos, Manjaro, OpenSuse Tumbleweed and many variants of the Puppy family. In all of them, I switched DEs, kernels and many other low-level components just for the experimentation - meaning I had a lot of broken installs.</p>
+
+        <p>A few of these experimentations I managed to restore the system, either by recovering Grub through a external image or actually booting into the broken installs with <span id="highlight">chroot</span> and similar commands. However, after a time it starts to get tedious and too repetitive.</p>
+
+        <p>Eventually I did learn about the BTRFS filesystem and their default snapshots mechanisms, first through OpenSuse's Snapper  implementation. However, I consider I've actually understood it better only after I've managed a full Arch install with <span id="highlight">LUKS/LVM Btrfs partitioning scheme</span>, including having the automatic bootable snapshots listed on Grub.</p>
+
+        <p>It wasn't a boolet-proof setup, there were a lot of issues I needed to overcome and several problems at each new update. Granted, many of which were my fault given it was my first experience daily-driving Arch for more than just a few days. And while I no longer use Arch, I learned a lot by just immersing myself within that ecosystem, and the manual installation process is an excelent learning experience as it forces you to manually format your disk and learn about different <span id="highlight">encryption</span> setups; user group permissions; basic network managment (if you do not use the Ethernet port); and several low-level configs (correctly setting <span id="highlight">mkinitcpio.conf</span> was always one of the most confusing parts for me).</p>
+
+        <p>There are obviously other installation processes arguably much more complex and lengthier than this: <span id="highlight">Gentoo and LFS</span>. But the point is: installing Arch manually, following their Wiki exclusively is a very interesting experience.</p>
+
+      <p>However, after doing the install, my experience with Arch quickly became boring. And it isn't necessarily a bad thing. Depending on what you do, having a mostly stable system is paramount, but I wanted to try different programs, DEs and WMs and other configs without having to manually recover the OS if I somehow corrupted the bootloader or anything similar. But even more important than that, I wanted to try something different, and hence my migration to NixOS.</p>
+
+        <p>While the native recoverability/immutability of NixOS was a major aspect of my decision, there were a lot of other nice discoveries and realizations that made me stay permanently:</p>
+
+<dl id="dl_post">
+  <dd>Declarative nature</dd>
+  <dt>While it wasn't the main reason I switched to NixOS, at least not initially, it is one of the most obvious reasons: Having the ability to fully configure my system, programs, and services <span id="highlight">declaratively</span> instead of relying on several config files spreaded throughout my filesystem is a far better method. Granted, there are some generic implementions that simulates this behavior on other distros, such as <span id="highlight">aconfmgr</span> but they do not have the scope and complexity of Nix/NixOS.</dt>
+  <dd>Home Manager</dd>
+  <dt>This is directly tied to the above described declarative nature of Nix/NixOS. However, "natively" Nix deals with the system-level configuration settings, without  affecting many of the user files, such as the ones in <span id="highlight">~/.config</span> and <span id="highlight">~/.local</span>. HM manages all those files.  </dt>
+  <dd>Isolated Environments</dd>
+  <dt>There are several solutions to this on Nix, some more complicated than others, but all of them allow me to have basically multiple instances of a single program running simultaneously; or different and incompatible versions of a software or library working independly from the base system, more specifically I am talking about nix-shell, nix-develop and <span id="highlight">flakes</span>. Obviously those already working with DevOps and other development areas are certainly familiar with  containerization and other techniques, but at the time these were all new concepts to me.</dt>
+
+</dl>
+
+        <p>As with anything there are drawbacks: running a non-nix application or script can offer severe complications, especially when it depends on low-level drivers/kernel modules or write into non-user directories (there are ways, of course!); there are many  major issues with the official documentation and the overall governancy of the NixOS project/Foundation; oftentimes the Binary Cache is behind the most recent build, or has fairly slow download connections, such as with CUDA.  </p>
+
+        <p>However, even with those complications or issues, NixOS remains as my main operation system for the foreseeable future: <span id="highlight">rolling release</span> model (the Unstable channel); a vast software repository; native and advanced recovery capabilities; declarative Firefox and Plasma settings; easy and safer experimentation with multiple DEs, WMs and so on. </p>
+      </article>
+
+    </div>
+
+    <footer>
+      <h3>Flavio Rezende Medeiros</h3>
+      <p>2026 | The vast majority of the content here is distributed under permissive licenses. The blog itself and my authored posts may be freely redistributed under CC BY 4.0</p>
+    </footer>
+
+  </body>
+
+</html>

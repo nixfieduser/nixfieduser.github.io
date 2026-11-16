@@ -1,0 +1,16 @@
+article .protonmail{
+    --icon: url("./src/protonmail.svg");
+    background-color: white;
+}
+
+ #mail, a {
+
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
+ }
+
+ #mail:hover{
+     font-size: 2.2rem;
+ }

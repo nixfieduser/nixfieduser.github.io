@@ -1,0 +1,84 @@
+article {
+    width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-shadow: 1px 1px black;
+    color: white;
+
+}
+
+#post_title {
+    margin-top: 50px;
+    text-shadow: 1px 1px 2px black;
+    font-size: 3.3rem;
+}
+
+
+
+#span_sign {
+    color: lightgoldenrodyellow;
+}
+
+#date {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+#highlight {
+    font-weight: bold;
+    font-style: italic;
+    color: lightgoldenrodyellow;
+}
+
+p {
+    padding: 5px;
+    text-indent: 60px;
+}
+
+article p:hover {
+    font-size: 1.8rem;
+}
+
+dd {
+    font-style: italic;
+    padding: 25px;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+dt {
+    box-shadow: none;
+    padding-left: 100px;
+    padding-right: 50px;
+    font-size: 1.4rem;
+}
+
+dt:hover {
+    font-size: 1.5rem;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+
+    article {
+        width: 90vw;
+        font-size: 1.3rem;
+    }
+
+    p:hover{
+        font-size: 1.4rem;
+    }
+
+    dt {
+        font-size: 1.2rem;
+    }
+
+    dt:hover {
+        font-size: 1.3rem;
+    }
+
+}

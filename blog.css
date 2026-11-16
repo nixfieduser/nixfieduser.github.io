@@ -1,0 +1,44 @@
+#post_history {
+    width: 1200pxarticle {
+    width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-shadow: 1px 1px black;
+    color: white;
+
+}
+
+#post_title {
+    margin-top: 50px;
+    text-shadow: 1px 1px 2px black;
+    font-size: 3.3rem;
+}
+
+
+
+#span_sign {
+    color: lightgoldenrodyellow;
+}
+
+#date {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+#post_link > a{
+    text-decoration: none;
+    color: white;
+}
+
+#post_link {
+    font-size: 2.3rem;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#post_link:hover {
+    font-size: 3.3rem;
+}
