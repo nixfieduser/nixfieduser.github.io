@@ -1,44 +1,16 @@
-#post_history {
-    width: 1200pxarticle {
-    width: 1000px;
-    margin: auto;
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 1.7rem;
-    font-weight: 500;
-    text-shadow: 1px 1px black;
-    color: white;
+#post_history{margin-top: 50px;}
 
-}
-
-#post_title {
-    margin-top: 50px;
-    text-shadow: 1px 1px 2px black;
-    font-size: 3.3rem;
-}
-
-
-
-#span_sign {
-    color: lightgoldenrodyellow;
-}
-
-#date {
+#post_title{
     font-size: 1.6rem;
-    font-style: italic;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
-#post_link > a{
-    text-decoration: none;
-    color: white;
-}
+#date {font-size: 1.1rem;}
 
-#post_link {
-    font-size: 2.3rem;
-    margin: auto;
-    margin-top: 50px;
-}
 
-#post_link:hover {
-    font-size: 3.3rem;
+@media (max-width: 470px){
+    #post_title{font-size: 1.1rem;}
+    #date{font-size: 0.8rem;}
+
 }

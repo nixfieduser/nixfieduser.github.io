@@ -1,8 +1,6 @@
 article {
-    width: 1000px;
+    width: 80vw;
     margin: auto;
-    margin-top: 50px;
-    padding: 20px;
     font-size: 1.7rem;
     font-weight: 500;
     text-shadow: 1px 1px black;
@@ -11,16 +9,18 @@ article {
 }
 
 #post_title {
-    margin-top: 50px;
+
     text-shadow: 1px 1px 2px black;
     font-size: 3.3rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 
 
-#span_sign {
-    color: lightgoldenrodyellow;
-}
+#span_sign {color: lightgoldenrodyellow;}
 
 #date {
     font-size: 1.6rem;
@@ -38,9 +38,7 @@ p {
     text-indent: 60px;
 }
 
-article p:hover {
-    font-size: 1.8rem;
-}
+article p:hover {background-color: rgb(135, 137, 191, 5%);}
 
 dd {
     font-style: italic;
@@ -56,29 +54,35 @@ dt {
     font-size: 1.4rem;
 }
 
-dt:hover {
-    font-size: 1.5rem;
+dt:hover {background-color: rgb(135, 137, 191, 5%);}
+
+@media (max-width: 700px){
+
+    #post_title{font-size: 1.8rem;}
+
+    article{
+        font-size: 1.3rem;
+        width: 95vw;
+        margin-bottom: 100px;
+    }
+
+    dt{
+        font-size:1.2rem;
+        padding-right: 30px;
+    }
 }
 
+@media (max-width: 470px){
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+    #post_title{font-size: 1.6rem;}
 
-
-    article {
-        width: 90vw;
-        font-size: 1.3rem;
+    article{
+        width: 100vw;
+        p {padding: 20px;}
     }
-
-    p:hover{
-        font-size: 1.4rem;
-    }
-
-    dt {
-        font-size: 1.2rem;
-    }
-
-    dt:hover {
-        font-size: 1.3rem;
+    dt{
+        padding: 45px;
+        font-size: 1.1rem;
     }
 
 }
