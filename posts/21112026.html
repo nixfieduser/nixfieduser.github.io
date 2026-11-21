@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nixfied User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../post_style.css">
+  </head>
+  <body>
+
+    <header>
+      <h1><span class="span_cursor">|</span>Nixfied<span>_$</span>USER</h1>
+      <ul id="navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#fastfetch">Fastfetch</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </header>
+
+    <div id="spacer"></div>
+
+    <div id="post">
+
+      <h1 id="post_title"><span id="date">Nov 21, 26 <span id="span_sign">>></span></span> My Emacs journey: chapter I</h1>
+
+      <article>
+
+<p>I have been using Emacs for the past couple of months and the experience has been very interesting. Obviously there are a lot more to learn and configure about that editor and the manner in which it is enabled on my current system.</p>
+
+<p>Being more specific, I am using <span id="highlight">Doom Emacs</span> and the vanilla editor from the Nixpkgs unstable branch (31.1, the most recent stable release). About the first one, I installed it by cloning the repo and running the script. I had no difficulty setting it up, however I now have another set of commands and tools to manage as Doom isn't directly integrated into my system by Nix. While there is a official <span id="highlight">shell.nix</span> file in their Github repo, it isn't as featured and well documented as I would've liked, besides its intend is far more about a testing and debugging environment rather than an actual distribution or permanent install method. </p>
+
+<p>Overall, I am really enjoying my experience with Doom Emacs so far. The only thing that out-of-the-box kept bothering me too much was <span id="highlight">evil-mode</span> being enabled by default. I understand how popular it is with advanced users or among those migrating from Vim/Nvim, but having to keep switching between input and the other states (or 'modes') isn't something I like, I prefer being able to type directly having all other actions triggered by key binds or functions (Alt-x).</p>
+
+<p>I am aware evil-mode can be easily toggled per session, workspace or buffer. However, I am already much more familiar with Emacs default navigation and seem better to dedicate myself to learn how to proper use it rather than mixing different plugins and modes that emulate the native behaviour of other tools and editors, so at least initially I chose to be more focused.</p>
+
+
+<p>That comment about extending the default Emacs might seem contradictory. After all I am using Doom and the vanilla release together. However, I would argue that it is a good approach to learn about what I like by being in a stable and pre-configured environment while I edit and customize everything else manually.</p>
+
+<p>Sure, it can be considerably slower than if I were dedicated entirely to set Emacs exactly the way I want beforehand, but I still need to learn about my preferences while dealing with a lot of responsabilities, so for now Doom stays as my primary editor.</p>
+
+<p>Currently I am dealing with the config files manually, but I haven't committed myself to either editing them directly or through <span id="highlight">Home Manager</span>, however I will likely end up using Nix when I get most of my settings defined (either through the <span id="highlight">extraConfig</span> and <span id="highlight">extraOptions</span> functions, or by creating symlinks with <span id="highlight">home.file</span>, likely the easiest and most pratical method).</p>
+
+<p>Well, this is certainly a much smaller post compared to my previous one but I intent to make it part of a series, documenting my main discoveries and learning experience with Emacs, so consider this an introduction.</p>
+
+<p>Thanks!</p>
+      </article>
+
+
+    </div>
+
+    <footer>
+      <h3>Flavio Rezende Medeiros</h3>
+      <p>2026 | The vast majority of the content here is distributed under permissive licenses. The blog itself and my authored posts may be freely redistributed under CC BY 4.0</p>
+    </footer>
+
+  </body>
+
+</html>
