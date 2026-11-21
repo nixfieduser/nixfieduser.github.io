@@ -175,11 +175,11 @@ a:hover {
 #recent_post {
     width: 1200px;
     margin: auto;
-    margin-bottom: 150px;
 }
 
 #recent {
     margin-top: 100px;
+    margin-bottom: 100px;
     width: fit-content;
     color: lightyellow;
 }
